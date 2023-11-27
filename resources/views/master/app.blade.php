@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>{{ $title }}</title>
     {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
-    <link rel="stylesheet" href="{{ asset('build/assets/app-9a7b91cd.css') }}">
+    <link rel="stylesheet" href="{{ asset('build/assets/app-dc0ad209.css') }}">
 </head>
 
 <body>

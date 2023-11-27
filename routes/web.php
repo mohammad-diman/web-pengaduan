@@ -16,7 +16,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('master.main');
+    return view('master.main', [
+        'title' => 'Inspektorat Kota Gorontalo'
+    ]);
 });
 
 Route::get('/profile', function () {

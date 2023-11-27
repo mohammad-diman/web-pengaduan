@@ -18,7 +18,8 @@ class DashboardController extends Controller
 
     {
         return view('master.layouts.dashboard-tabel', [
-            'pengaduan' => Pengaduan::all()
+            'pengaduan' => Pengaduan::paginate(10),
+            'title' => 'Dashboard'
         ]);
     }
 

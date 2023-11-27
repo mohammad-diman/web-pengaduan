@@ -1,8 +1,16 @@
 @extends('master.auth-main')
 
 @section('content')
-    <div class="relative overflow-x-auto rounded-lg">
-        <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+    <div class="w-full my-4 px-5 flex space-x-4">
+        <div class="bg-slate-800 max-w-sm text-gray-100 rounded-lg p-3">
+            <h1 class="font-bold text-center">132 Laporan Pungutan Liar</h1>
+        </div>
+        <div class="bg-slate-800 max-w-sm text-gray-100 rounded-lg p-3">
+            <h1 class="font-bold text-center">132 Laporan Gratifikasi</h1>
+        </div>
+    </div>
+    <div class="relative overflow-x-auto rounded-lg px-5">
+        <table class="w-full text-sm text-left text-gray-500">
             <thead class="text-xs text-white uppercase bg-gray-800">
                 <tr>
                     <th scope="col" class="px-6 py-3">
@@ -32,7 +40,7 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($pengaduan as $p)
+                @forelse ($pengaduan as $p)
                     <tr class="bg-gray-50 border-b">
                         <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
                             {{ $p->nama }}
@@ -77,8 +85,14 @@
                             </form>
                         </td>
                     </tr>
-                @endforeach
+                @empty
+                    <tr>
+                       <td colspan="8" class="text-center font-semibold uppercase py-5 border-b-2">Belum Ada Laporan!</td> 
+                    </tr>
+                @endforelse
             </tbody>
         </table>
+
+        {{ $pengaduan->links() }}
     </div>
 @endsection
