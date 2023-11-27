@@ -3,10 +3,10 @@
 @section('content')
     <div class="w-full my-4 px-5 flex space-x-4">
         <div class="bg-slate-800 max-w-sm text-gray-100 rounded-lg p-3">
-            <h1 class="font-bold text-center">132 Laporan Pungutan Liar</h1>
+            <h1 class="font-bold text-center">{{ $pengaduan->where('kategori', 'Gratifikasi')->count() }} Laporan Pungutan Liar</h1>
         </div>
         <div class="bg-slate-800 max-w-sm text-gray-100 rounded-lg p-3">
-            <h1 class="font-bold text-center">132 Laporan Gratifikasi</h1>
+            <h1 class="font-bold text-center">{{ $pengaduan->where('kategori', 'Pungutan Liar')->count() }} Laporan Gratifikasi</h1>
         </div>
     </div>
     <div class="relative overflow-x-auto rounded-lg px-5">
