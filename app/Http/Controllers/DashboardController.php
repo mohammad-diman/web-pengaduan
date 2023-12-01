@@ -40,6 +40,7 @@ class DashboardController extends Controller
         $rules = $request->validate([
             'nama' => 'required',
             'judul' => 'required',
+            'kategori' => 'required',
             'pesan' => 'required',
             'tanggal' => 'required',
             'lokasi' => 'required',
